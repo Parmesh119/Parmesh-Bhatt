@@ -42,7 +42,7 @@ export function ContactSection() {
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.ChangeEvent<any>) => {
     e.preventDefault();
     if (!name || !email || !message) {
 			toast.error("All fields are required...", {
