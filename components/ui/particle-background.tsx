@@ -1,85 +1,25 @@
 "use client";
 
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
-import type { Engine } from "@tsparticles/engine";
-import { loadFull } from "tsparticles";
+import React from "react";
+import Confetti from "react-confetti";
+import { useWindowSize } from "react-use";
 
 export function ParticleBackground() {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine);
-  }, []);
+  const { width, height } = useWindowSize();
 
   return (
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      options={{
-        fullScreen: {
-          enable: false,
-          zIndex: -1,
-        },
-        background: {
-          color: {
-            value: "transparent",
-          },
-        },
-        fpsLimit: 120,
-        interactivity: {
-          events: {
-            onHover: {
-              enable: true,
-              mode: "repulse",
-            },
-          },
-          modes: {
-            repulse: {
-              distance: 100,
-              duration: 0.4,
-            },
-          },
-        },
-        particles: {
-          color: {
-            value: "var(--primary)",
-          },
-          links: {
-            color: "var(--primary)",
-            distance: 150,
-            enable: true,
-            opacity: 0.2,
-            width: 1,
-          },
-          move: {
-            direction: "none",
-            enable: true,
-            outModes: {
-              default: "bounce",
-            },
-            random: false,
-            speed: 1,
-            straight: false,
-          },
-          number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
-            value: 80,
-          },
-          opacity: {
-            value: 0.2,
-          },
-          shape: {
-            type: "circle",
-          },
-          size: {
-            value: { min: 1, max: 3 },
-          },
-        },
-        detectRetina: true,
-      }}
-      className="absolute inset-0"
-    />
+    <div className="absolute inset-0">
+      <Confetti
+        width={width}
+        height={height}
+        numberOfPieces={100} // Number of particles
+        gravity={0.05} // Controls particle fall speed
+        wind={0} // Horizontal movement
+        recycle={true} // Particles keep looping
+        colors={["#3B82F6", "#60A5FA", "#93C5FD"]} // Colors for particles
+        initialVelocityX={{ min: -2, max: 2 }} // Initial horizontal velocity
+        initialVelocityY={{ min: -2, max: 2 }} // Initial vertical velocity
+      />
+    </div>
   );
 }
