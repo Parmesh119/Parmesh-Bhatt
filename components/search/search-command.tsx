@@ -1,10 +1,16 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { Command } from 'cmdk';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Search, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import dynamic from 'next/dynamic';
+import { Command } from 'cmdk';
+
+const AnimatePresence = dynamic(
+  () => import('framer-motion').then((mod) => mod.AnimatePresence),
+  { ssr: false }
+);
 
 interface SearchItem {
   id: string;
@@ -30,10 +36,18 @@ export function SearchCommand() {
         e.preventDefault();
         setOpen((open) => !open);
       }
-    };
+    };  
 
-    document.addEventListener('keydown', down);
-    return () => document.removeEventListener('keydown', down);
+    if(typeof window !== "undefined") {
+      document.addEventListener('keydown', down);
+    }
+      
+    return () => {
+      if (typeof window !== 'undefined') {
+        document.removeEventListener('keydown', down);
+      }
+    };
+    // return () => document.removeEventListener('keydown', down);
   }, []);
 
   return (
@@ -83,7 +97,9 @@ export function SearchCommand() {
                       key={item.id}
                       value={item.title}
                       onSelect={() => {
-                        window.location.href = item.href;
+                        if(typeof window !== "undefined") {
+                          window.location.href = item.href;
+                        }
                         setOpen(false);
                       }}
                       className="flex items-center gap-2 px-2 py-1.5 text-sm rounded-md hover:bg-accent cursor-pointer"

@@ -5,6 +5,9 @@ import { ExperienceSection } from '@/components/sections/experience';
 import { EducationSection } from '@/components/sections/education';
 import { CertificationsSection } from '@/components/sections/certifications';
 import { ContactSection } from '@/components/sections/contact';
+import dynamic from "next/dynamic";
+
+
 
 export default function Home() {
   return (

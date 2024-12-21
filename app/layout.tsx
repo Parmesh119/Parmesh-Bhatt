@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-import { CustomCursor } from '@/components/custom-cursor';
+import CustomCursor from '@/components/CustomCursor';
 import { ScrollProgress } from '@/components/scroll-progress';
 import { AnimatedBackground } from '@/components/ui/animated-background';
 import { Toaster } from "react-hot-toast";

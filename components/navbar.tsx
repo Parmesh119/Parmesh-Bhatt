@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ModeToggle } from '@/components/mode-toggle';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Menu, X, Home, Download } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import TextCycler from './TextCycler';
+import dynamic from 'next/dynamic';
+
+const TextCycler = dynamic(() => import('./TextCycler'), { ssr: false });
+const ModeToggle = dynamic(() => import('./ModeToggle'), { ssr: false });
 
 const navItems = [
   { href: '/', icon: <Home className="h-4 w-4" /> },
@@ -30,9 +32,12 @@ export function Navbar() {
   });
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -58,7 +63,7 @@ export function Navbar() {
             href="/" 
             className="text-2xl font-bold tracking-wider text-gradient-hover transition-all duration-300"
           >
-            <TextCycler/>
+            <TextCycler />
           </Link>
 
           {/* Desktop Navigation */}

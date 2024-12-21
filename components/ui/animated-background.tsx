@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import dynamic from "next/dynamic";
 
-export function AnimatedBackground() {
+// Dynamically import the AnimatedBackground component with ssr: false to avoid "window not defined" error.
+export const AnimatedBackground = dynamic(() => Promise.resolve(() => {
   const { theme } = useTheme();
 
   return (
@@ -49,4 +51,4 @@ export function AnimatedBackground() {
       ))}
     </div>
   );
-}
+}), { ssr: false });

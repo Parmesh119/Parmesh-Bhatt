@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
-export function CustomCursor() {
+export default function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
 
@@ -11,7 +11,7 @@ export function CustomCursor() {
     const mouseMove = (e: MouseEvent) => {
       setMousePosition({
         x: e.clientX,
-        y: e.clientY
+        y: e.clientY,
       });
     };
 
@@ -36,12 +36,12 @@ export function CustomCursor() {
         x: mousePosition.x,
         y: mousePosition.y,
         scale: isVisible ? 1 : 0,
-        opacity: isVisible ? 0.5 : 0
+        opacity: isVisible ? 0.5 : 0,
       }}
       transition={{
         type: "spring",
         stiffness: 500,
-        damping: 28
+        damping: 28,
       }}
     />
   );
