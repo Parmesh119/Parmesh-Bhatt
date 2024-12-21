@@ -92,7 +92,7 @@ export function Navbar() {
                 asChild
                 className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
               >
-                <Link href="/resume.pdf" target="_blank" className="flex items-center gap-2">
+                <Link href="https://drive.google.com/file/d/132MFGfr0Cen2ggKwNRxlEW8gTHNrCHGD/view?usp=sharing" target="_blank" className="flex items-center gap-2">
                   <Download className="h-4 w-4" />
                   Resume
                 </Link>
@@ -146,7 +146,7 @@ export function Navbar() {
                 asChild
                 className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
               >
-                <Link href="/resume.pdf" target="_blank" className="flex items-center gap-2">
+                <Link href="https://drive.google.com/file/d/132MFGfr0Cen2ggKwNRxlEW8gTHNrCHGD/view?usp=sharing" target="_blank" className="flex items-center gap-2">
                   <Download className="h-4 w-4" />
                   Resume
                 </Link>
