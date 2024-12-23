@@ -29,7 +29,7 @@ export function AboutSection() {
               className="relative aspect-square rounded-xl overflow-hidden"
             >
               <Image
-                src="https://github.com/Parmesh119/parmesh-bhatt/blob/master/public/logo.png?raw=true"
+                src="https://avatars.githubusercontent.com/u/101285245?v=4"
                 alt="Profile picture"
                 fill
                 className="object-cover rounded-full"
