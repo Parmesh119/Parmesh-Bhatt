@@ -118,13 +118,13 @@ export function Navbar() {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <motion.div
-            className="md:hidden pt-4"
+            className="md:hidden pt-4 lg:mr-0 mr-10"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4 bg-white p-4 rounded-lg shadow-lg">
               {navItems.map((item) => (
                 <motion.div
                   key={item.href}
@@ -137,7 +137,7 @@ export function Navbar() {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.icon}
-                    <span>{item.label}</span>
+                    <span className='text-black'>{item.label}</span>
                   </Link>
                 </motion.div>
               ))}

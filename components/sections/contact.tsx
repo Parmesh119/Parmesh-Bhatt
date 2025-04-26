@@ -153,8 +153,7 @@ export function ContactSection() {
 
               <Card className="p-6">
                 <h3 className="text-xl font-semibold mb-4">Location</h3>
-                <p className="text-muted-foreground">
-                  Navsari, Gujarat
+                <p className="text-muted-foreground">Gujarat
                   <br />
                   India.
                 </p>

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const TextCycler = () => {
-    const words = ["Developer", "Captain", "Leader", "Engineer"];
+    const words = ["Developer", "Engineer"];
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [displayedCharacters, setDisplayedCharacters] = useState<string[]>([]);
     const [isRemoving, setIsRemoving] = useState(false);
