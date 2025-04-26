@@ -6,6 +6,7 @@ import { EducationSection } from '@/components/sections/education';
 import { CertificationsSection } from '@/components/sections/certifications';
 import { ContactSection } from '@/components/sections/contact';
 import dynamic from "next/dynamic";
+import SkillsSection from '@/components/sections/skills';
 
 
 
@@ -17,6 +18,7 @@ export default function Home() {
       <ProjectsSection />
       <ExperienceSection />
       <EducationSection />
+      <SkillsSection />
       <CertificationsSection />
       <ContactSection />
     </>

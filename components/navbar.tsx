@@ -10,13 +10,14 @@ import dynamic from 'next/dynamic';
 
 const TextCycler = dynamic(() => import('./TextCycler'), { ssr: false });
 const ModeToggle = dynamic(() => import('./ModeToggle'), { ssr: false });
-
+import { usePathname } from 'next/navigation';
 const navItems = [
-  { href: '/', icon: <Home className="h-4 w-4" /> },
+  { href: '/', icon: <Home className="h-4 w-4" />, label: 'Home' },
   { href: '#about', label: 'About' },
   { href: '#projects', label: 'Projects' },
   { href: '#experience', label: 'Experience' },
   { href: '#education', label: 'Education' },
+  { href: '#skills', label: 'Skills' },
   { href: '#certifications', label: 'Certifications' },
   { href: '#contact', label: 'Contact' },
 ];
@@ -45,7 +46,7 @@ export function Navbar() {
   return (
     <motion.header
       className={cn(
-        'fixed w-full z-50 transition-all duration-500',
+        'fixed w-full z-50 transition-all duration-500 border-b',
         isScrolled ? 'glass-effect' : 'bg-transparent'
       )}
       initial={{ y: -100 }}
@@ -78,8 +79,7 @@ export function Navbar() {
                   href={item.href}
                   className="nav-link flex items-center gap-2"
                 >
-                  {item.icon}
-                  <span>{item.label}</span>
+                  <span>{item.label === "Home" ? item.icon : item.label}</span>
                 </Link>
               </motion.div>
             ))}
@@ -136,8 +136,8 @@ export function Navbar() {
                     className="nav-link flex items-center gap-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    {item.icon}
-                    <span className='text-black'>{item.label}</span>
+                    
+                    <span className='text-black'>{item.label === "Home" ? item.icon : item.label}</span>
                   </Link>
                 </motion.div>
               ))}

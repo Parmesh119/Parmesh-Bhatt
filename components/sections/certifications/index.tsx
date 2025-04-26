@@ -32,7 +32,7 @@ const certifications = [
 
 export function CertificationsSection() {
   return (
-    <section id="certifications" className="section-padding bg-muted/50">
+    <section id="certifications" className="section-padding bg-muted/50 p-24">
       <div className="container px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
