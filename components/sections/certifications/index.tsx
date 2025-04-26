@@ -32,22 +32,22 @@ const certifications = [
 
 export function CertificationsSection() {
   return (
-    <section id="certifications" className="section-padding bg-muted/50 p-24">
-      <div className="container px-4 md:px-6">
+    <section id="certifications" className="section-padding bg-muted/50 py-16 px-4 sm:px-6 md:py-24">
+      <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="space-y-12"
+          className="space-y-8 md:space-y-12"
         >
-          <div className="space-y-4 text-center">
+          <div className="space-y-3 md:space-y-4 text-center">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-3xl md:text-4xl font-bold tracking-tighter"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter"
             >
               Professional <span className="text-gradient">Certifications</span>
             </motion.h2>
@@ -56,13 +56,13 @@ export function CertificationsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-lg text-muted-foreground max-w-[800px] mx-auto text-balance"
+              className="text-base sm:text-lg text-muted-foreground max-w-[800px] mx-auto text-balance"
             >
               Industry-recognized certifications that validate my expertise and commitment to continuous learning
             </motion.p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {certifications.map((certification, index) => (
               <CertificationCard key={index} {...certification} index={index} />
             ))}
