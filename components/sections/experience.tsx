@@ -11,7 +11,7 @@ const experiences = [
     company: "Liquify Solutions",
     period: "Dec 2024 - Present",
     description: "Collaborated within a team of 4 developers to build scalable web applications using React, TanStack Router, TanStack Query, and Spring Boot. Contributed to project planning, code reviews, and implemented best practices to deliver high-quality solutions.",
-    skills: ["Tanstack router and query", "React.Js",  "JS", "TS", "Spring Boot", "Kotlin", "Docker","PostgreSQL"],
+    skills: ["Tanstack router and query", "React.Js",  "JS", "TS", "Spring Boot", "Kotlin", "Docker","PostgreSQL", "Keycloak", "Prometheus", "Grafana"],
   },
   {
     title: "Cloud Captain",
