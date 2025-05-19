@@ -35,25 +35,25 @@ export function CertificationsSection() {
     <section id="certifications" className="section-padding bg-muted/50 py-16 px-4 sm:px-6 md:py-24">
       <div className="container mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="space-y-8 md:space-y-12"
         >
           <div className="space-y-3 md:space-y-4 text-center">
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter"
+              className="text-3xl md:text-4xl font-bold tracking-tighter"
             >
               Professional <span className="text-gradient">Certifications</span>
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-base sm:text-lg text-muted-foreground max-w-[800px] mx-auto text-balance"

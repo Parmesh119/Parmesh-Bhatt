@@ -41,8 +41,8 @@ export function ProjectsSection() {
     <section id="projects" className="py-24">
       <div className="container px-4 md:px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
@@ -70,8 +70,8 @@ export function ProjectsSection() {
 function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="h-full"

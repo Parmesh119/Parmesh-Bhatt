@@ -32,8 +32,8 @@ export function EducationSection() {
       <div className="space-y-12">
         <div className="space-y-4 text-center">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl font-bold tracking-tighter"
@@ -41,8 +41,8 @@ export function EducationSection() {
             Education <span className="text-gradient">Journey</span>
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-[800px] mx-auto text-balance"
