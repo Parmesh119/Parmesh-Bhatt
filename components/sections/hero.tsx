@@ -106,7 +106,7 @@ export function HeroSection() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link href="https://drive.google.com/file/d/132MFGfr0Cen2ggKwNRxlEW8gTHNrCHGD/view?usp=sharing" target="_blank">
+              <Link href="https://drive.google.com/file/d/1Wlybo7T5CL0ILDWg5xLddq32a8102NLx/view?usp=sharing" target="_blank">
                 Download Resume
               </Link>
             </Button>

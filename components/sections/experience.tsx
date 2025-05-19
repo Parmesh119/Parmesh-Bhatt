@@ -7,9 +7,9 @@ import { Badge } from "@/components/ui/badge";
 
 const experiences = [
   {
-    title: "SDE (Software Developer)",
+    title: "Software Developer (Internship)",
     company: "Liquify Solutions",
-    period: "Dec 2024 - Present",
+    period: "Dec 2024 - May 2025",
     description: "Collaborated within a team of 4 developers to build scalable web applications using React, TanStack Router, TanStack Query, and Spring Boot. Contributed to project planning, code reviews, and implemented best practices to deliver high-quality solutions.",
     skills: ["Tanstack router and query", "React.Js",  "JS", "TS", "Spring Boot", "Kotlin", "Docker","PostgreSQL", "Keycloak", "Prometheus", "Grafana"],
   },

@@ -8,8 +8,8 @@ const educationData = [
   {
     degree: "Bachelor of Technology in Information Technology",
     institution: "Charotar University of Science and Technology",
-    year: "Oct 2021 - April 2025",
-    description: "8.54 CGPA",
+    year: "Oct 2021 - May 2025",
+    description: "8.64 CGPA",
   },
   {
     degree: "HSC - 12th Standard",
