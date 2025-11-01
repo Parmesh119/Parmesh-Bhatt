@@ -7,17 +7,24 @@ import { motion } from "framer-motion"
 
 const experiences = [
   {
-    title: "Software Developer Engineer",
-    company: "Liquify Solutions",
-    period: "January 2025 - Present",
-    description:
-      "Development of enterprise-level web applications using Spring Boot, handling both frontend and backend components, and providing solutions to real-world problems.",
-    skills: ["Spring Boot", "Java", "Full Stack Development"],
+    title: "Web Developer (Internship)",
+    company: "Wappzo Infotech Private Limited",
+    period: "August 2025 - Present",
+    description: "Strengthened MERN stack fundamentals by building responsive websites with HTML, CSS, and Tailwind CSS. Enhanced front-end skills with TypeScript, React, Next.js, and React Native.",
+    skills: ["React", "Next.js", "Tailwind CSS", "TypeScript", "PostgreSQL", "RESTful APIs", "React Native"],
   },
   {
-    title: "Junior Full Stack Developer",
-    company: "The Development Studio",
-    period: "July 2024 - October 2024",
+    title: "Software Developer (Internship)",
+    company: "Liquify Solutions",
+    period: "December 2025 - May 2025",
+    description:
+      "Developed enterprise-level web applications using React and Spring Boot, optimizing performance through efficient data handling and implementing best practices for scalable solutions.",
+    skills: ["Spring Boot", "Kotlin", "Full Stack Development", "React", "Tanstack Router", "Tanstack Query", "PostgreSQL"],
+  },
+  {
+    title: "Cloud Captain",
+    company: "AWS Cloud Club Charusat",
+    period: "March 2024 - March 2025",
     description:
       "Development of enterprise-level web applications, handling frontend components, and integrating APIs for actual data.",
     skills: ["React", "Node.js", "API Integration"],
