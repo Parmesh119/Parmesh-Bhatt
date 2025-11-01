@@ -1,0 +1,301 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+html {
+  /* Add scrollbar-gutter to prevent layout shift when scrollbar appears/disappears */
+  scrollbar-gutter: stable;
+}
+
+:root {
+  --background: oklch(0.99 0.01 0);
+  --foreground: oklch(0.2 0.01 0);
+  --primary: oklch(0.64 0.13 195);
+  --primary-foreground: oklch(0.99 0 0);
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --secondary: oklch(0.97 0.01 0);
+  --secondary-foreground: oklch(0.22 0.01 0);
+  --muted: oklch(0.97 0.01 0);
+  --muted-foreground: oklch(0.55 0.02 0);
+  --accent: oklch(0.96 0.015 210);
+  --accent-foreground: oklch(0.22 0.01 0);
+  --ring: oklch(0.68 0.06 200);
+  --destructive: oklch(0.57 0.24 27.3);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.91 0.01 0);
+  --input: var(--border);
+  --chart-1: oklch(0.64 0.22 41.1);
+  --chart-2: oklch(0.6 0.12 184.7);
+  --chart-3: oklch(0.4 0.07 227.4);
+  --chart-4: oklch(0.83 0.19 84.4);
+  --chart-5: oklch(0.77 0.19 70.1);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0.01 0);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+.dark {
+  --background: oklch(0.16 0.01 255);
+  --foreground: oklch(0.97 0.01 0);
+  --primary: oklch(0.78 0.15 90);
+  --primary-foreground: oklch(0.18 0.02 0);
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --secondary: oklch(0.28 0.01 255);
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.28 0.01 255);
+  --muted-foreground: oklch(0.7 0.02 255);
+  --accent: oklch(0.32 0.03 200);
+  --accent-foreground: var(--foreground);
+  --destructive: oklch(0.45 0.14 25.7);
+  --destructive-foreground: oklch(0.97 0.01 0);
+  --border: oklch(0.28 0.01 255);
+  --input: var(--border);
+  --ring: oklch(0.46 0.05 250);
+  --chart-1: oklch(0.58 0.22 32);
+  --chart-2: oklch(0.66 0.16 170);
+  --chart-3: oklch(0.76 0.18 70);
+  --chart-4: oklch(0.62 0.24 303.9);
+  --chart-5: oklch(0.65 0.24 16.4);
+  --sidebar: oklch(0.2 0.01 255);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+@theme inline {
+  --font-sans: "Poppins", var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Added comprehensive animation keyframes for all effects */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes blurIn {
+    from {
+      opacity: 0;
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+  @keyframes progressBar {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 80%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes progressFadeOut {
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes skeleton {
+    0%,
+    100% {
+      background-position: 200% 0;
+    }
+    50% {
+      background-position: -200% 0;
+    }
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    0%,
+    49%,
+    100% {
+      border-right-color: currentColor;
+    }
+    50%,
+    99% {
+      border-right-color: transparent;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-fade-out {
+    animation: fadeOut 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideInUp 0.6s ease-out;
+  }
+
+  .animate-slide-down {
+    animation: slideInDown 0.6s ease-out;
+  }
+
+  .animate-slide-left {
+    animation: slideInLeft 0.6s ease-out;
+  }
+
+  .animate-slide-right {
+    animation: slideInRight 0.6s ease-out;
+  }
+
+  .animate-blur-in {
+    animation: blurIn 0.8s ease-out;
+  }
+
+  .animate-progress {
+    animation: progressBar 2s ease-in-out forwards;
+  }
+
+  .animate-progress-fade {
+    animation: progressFadeOut 0.5s ease-out 2s forwards;
+  }
+
+  .animate-skeleton {
+    animation: skeleton 2s infinite;
+    background-size: 200% 100%;
+  }
+
+  .animate-typing {
+    animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid;
+  }
+}
