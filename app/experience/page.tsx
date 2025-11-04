@@ -64,7 +64,7 @@ export default function ExperiencePage() {
         {experiences.map((exp, idx) => (
           <motion.div key={idx} variants={itemVariants}>
             <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
+              <CardContent>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <Briefcase className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
