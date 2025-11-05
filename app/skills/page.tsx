@@ -5,10 +5,10 @@ import { MotionSection } from "@/components/motion-section"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const skills = {
-  Languages: ["TypeScript", "JavaScript", "SQL"],
-  Frameworks: ["Next.js", "React", "Node.js"],
-  UI: ["Tailwind CSS", "shadcn/ui", "Framer Motion"],
-  Tools: ["Git", "Vercel", "Playwright"],
+  Languages: ["TypeScript", "JavaScript", "Kotlin", "Java"],
+  Frameworks: ["Next.js", "React", "Node.js", "Express.js", "Spring Boot", "Tanstack Router", "Tanstack Query", "Tailwind CSS", "Shadcn UI"],
+  Tools: ["Git", "Docker", "Keycloak"],
+  Databases: ["PostgreSQL", "MongoDB"],
 }
 
 const containerVariants = {

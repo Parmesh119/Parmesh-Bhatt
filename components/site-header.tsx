@@ -14,7 +14,6 @@ const nav = [
   { href: "/experience", label: "Experience" },
   { href: "/projects", label: "Projects" },
   { href: "/education", label: "Education" },
-  { href: "/certificates", label: "Certificates" },
   { href: "/skills", label: "Skills" },
   { href: "/contact", label: "Contact" },
   { href: "/resume", label: "Resume" },
