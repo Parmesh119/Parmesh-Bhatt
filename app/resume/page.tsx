@@ -31,7 +31,7 @@ export default function ResumePage() {
             <Download size={18} />
             Download Resume
           </Button>
-          <p className="text-md text-muted-foreground mt-4 items-center">
+          <p className="text-md text-muted-foreground">
             If the PDF doesn&apos;t display, please download it using the <b>Download Resume</b> button.
           </p>
         </div>

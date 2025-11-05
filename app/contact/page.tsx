@@ -90,7 +90,7 @@ export default function ContactPage() {
 
         <MotionSection>
           <Card>
-            <CardContent className="pt-6">
+            <CardContent>
               <h2 className="text-2xl font-bold mb-6">Send Message</h2>
               <form
                 className="space-y-4"
