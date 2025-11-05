@@ -7,16 +7,16 @@ import { motion } from "framer-motion"
 
 const education = [
   {
-    degree: "Bachelor of Science in Computer Science",
-    school: "State University",
-    period: "2017 - 2021",
+    degree: "Bachelor of Technology in Information Technology",
+    school: "Charusat University, Anand",
+    period: "October 2021 - May 2025",
     details: "Focused on full-stack development, data structures, and software engineering principles.",
   },
   {
-    degree: "Advanced Web Development Certification",
-    school: "Tech Academy",
-    period: "2021 - 2022",
-    details: "Specialized in modern web technologies including React, Node.js, and cloud deployment.",
+    degree: "12th Science - HSC",
+    school: "The Ambika High School, Gadat",
+    period: "June 2019 - July 2021",
+    details: "Completed with a focus on Science stream, with a strong emphasis on Mathematics, Physics, and Chemistry.",
   },
 ]
 
@@ -53,11 +53,11 @@ export default function EducationPage() {
         {education.map((edu, idx) => (
           <motion.div key={idx} variants={itemVariants}>
             <Card className="border-l-4 border-l-primary hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
+              <CardContent>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <GraduationCap className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                    <div className="flex-1">
+                    <div className="flex-1 space-y-2">
                       <h3 className="text-xl font-bold">{edu.degree}</h3>
                       <p className="text-muted-foreground">{edu.school}</p>
                     </div>

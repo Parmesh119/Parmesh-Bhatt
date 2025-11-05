@@ -68,7 +68,7 @@ export default function ExperiencePage() {
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <Briefcase className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                    <div className="flex-1">
+                    <div className="flex-1 space-y-2">
                       <h3 className="text-xl font-bold">{exp.title}</h3>
                       <p className="text-muted-foreground">{exp.company}</p>
                     </div>
