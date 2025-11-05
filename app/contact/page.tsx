@@ -22,7 +22,7 @@ export default function ContactPage() {
 
       <div className="grid md:grid-cols-2 gap-12">
         <MotionSection>
-          <div className="space-y-8">
+          <div className="space-y-4">
             <div>
               <h2 className="text-2xl font-bold mb-6">Let&apos;s Connect</h2>
               <p className="text-muted-foreground text-justify mb-8">
@@ -32,31 +32,31 @@ export default function ContactPage() {
 
             <div className="space-y-4">
               <Card className="hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6 flex items-start gap-4">
+                <CardContent className=" flex items-start gap-4">
                   <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-muted-foreground">omipatel7113@gmail.com</p>
+                    <p className="text-muted-foreground">parmeshb90@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6 flex items-start gap-4">
+                <CardContent className="flex items-start gap-4">
                   <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p className="text-muted-foreground">+91 9726368386</p>
+                    <p className="text-muted-foreground">+91 6355177933</p>
                   </div>
                 </CardContent>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6 flex items-start gap-4">
+                <CardContent className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold">Location</h3>
-                    <p className="text-muted-foreground">Bilimora, Gujarat, India</p>
+                    <p className="text-muted-foreground">Gujarat, India</p>
                   </div>
                 </CardContent>
               </Card>
@@ -64,19 +64,22 @@ export default function ContactPage() {
 
             <div className="flex gap-4 pt-4">
               <Link
-                href="#"
+                href="https://github.com/Parmesh119"
+                target="_blank"
                 className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Github className="w-5 h-5" />
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/in/parmesh-bhatt/"
+                target="_blank"
                 className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
               </Link>
               <Link
-                href="#"
+                href="https://twitter.com/Parmesh_119"
+                target="_blank"
                 className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Twitter className="w-5 h-5" />
@@ -96,21 +99,21 @@ export default function ContactPage() {
                   alert("Thanks for reaching out! I'll get back to you soon.")
                 }}
               >
-                <div className="space-y-2">
+                <div className="space-y-2 flex flex-col">
                   <label htmlFor="name" className="text-sm font-medium">
                     Your Name
                   </label>
                   <Input id="name" name="name" placeholder="Your name" required />
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-2 flex flex-col">
                   <label htmlFor="email" className="text-sm font-medium">
                     Your Email
                   </label>
                   <Input id="email" name="email" type="email" placeholder="your@email.com" required />
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-2 flex flex-col">
                   <label htmlFor="message" className="text-sm font-medium">
                     Your Message
                   </label>

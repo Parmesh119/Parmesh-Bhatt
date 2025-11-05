@@ -26,16 +26,14 @@ export default function ResumePage() {
 
       {/* Download Button */}
       <MotionSection>
-        <div className="flex gap-3">
+        <div className="flex gap-3 flex-row-reverse justify-between items-center">
           <Button onClick={handleDownload} className="gap-2">
             <Download size={18} />
             Download Resume
           </Button>
-          <Button variant="outline" asChild>
-            <Link href="#" target="_blank" rel="noopener noreferrer">
-              View Full Profile
-            </Link>
-          </Button>
+          <p className="text-md text-muted-foreground mt-4 items-center">
+            If the PDF doesn&apos;t display, please download it using the <b>Download Resume</b> button.
+          </p>
         </div>
       </MotionSection>
 
@@ -49,9 +47,6 @@ export default function ResumePage() {
             <div className="w-full bg-muted rounded-lg overflow-hidden">
               <iframe src="/resume.pdf" className="w-full h-screen md:h-[800px] border-0" title="Resume PDF" />
             </div>
-            <p className="text-sm text-muted-foreground mt-4">
-              If the PDF doesn&apos;t display, please download it using the button above.
-            </p>
           </CardContent>
         </Card>
       </MotionSection>
