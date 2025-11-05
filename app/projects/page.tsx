@@ -9,7 +9,7 @@ import Link from "next/link"
 
 const projects = [
   {
-    title: "retroUI - React Component Library",
+    title: "RitualPlanner",
     description:
       "A carefully crafted UI component library built with ReactJS and Tailwind CSS, designed for retro-themed interfaces.",
     image: "/minimal-ui-components.jpg",
@@ -18,7 +18,7 @@ const projects = [
     links: { demo: "#", source: "#" },
   },
   {
-    title: "getYourTiffin()",
+    title: "Furniture Rentals",
     description: "A food ordering platform with Razorpay integration and admin interface for order management.",
     image: "/ecommerce-product-grid.png",
     skills: ["Next.js", "Razorpay", "MongoDB"],
@@ -26,7 +26,7 @@ const projects = [
     links: { demo: "#", source: "#" },
   },
   {
-    title: "motivate.js - NPM Package",
+    title: "Bug Tracking System",
     description: "An npm package that provides motivational quotes when errors occur during development.",
     image: "/npm-package.jpg",
     skills: ["NPM", "JavaScript", "Node.js"],
