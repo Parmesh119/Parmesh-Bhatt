@@ -156,6 +156,7 @@ export default function ContactPage() {
                     id="name"
                     name="name"
                     placeholder="Your name"
+                    disabled={isSubmitting}
                   />
                   <div className="text-red-500 text-sm">
                     {errors.name?.message}
@@ -189,6 +190,7 @@ export default function ContactPage() {
                     name="email"
                     type="email"
                     placeholder="your@email.com"
+                    disabled={isSubmitting}
                   />
                   <div className="text-red-500 text-sm">
                     {errors.email?.message}
@@ -221,6 +223,7 @@ export default function ContactPage() {
                     id="message"
                     name="message"
                     placeholder="Your message here..."
+                    disabled={isSubmitting}
                     rows={5}
                   />
                   <div className="text-red-500 text-sm">
@@ -228,7 +231,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <Button disabled={isSubmitting} type="submit" size="lg" className={`w-full ${isSubmitting ? 'cursor-not-allowed bg-primary/50 text-primary-foreground/50' : 'cursor-pointer bg-primary text-primary-foreground'}`}>
+                <Button disabled={isSubmitting} type="submit" size="lg" className={`w-full ${isSubmitting ? 'cursor-not-allowed' : 'cursor-pointer bg-primary text-primary-foreground'}`}>
                   <Send className="w-4 h-4 mr-2" />
                   {isSubmitting ? 'Submitting...' : 'Send Message'}
                 </Button>

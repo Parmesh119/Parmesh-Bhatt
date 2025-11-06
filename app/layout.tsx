@@ -43,7 +43,14 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <Analytics />
-        <Toaster position="top-center" />
+        <Toaster position="bottom-right" style={{
+          fontSize: '14px',
+          padding: '12px 20px',
+          borderRadius: '8px',
+          color: '#fff',
+          backgroundColor: '#333',
+          fontWeight: "bold"
+        }} />
       </body>
     </html>
   )
