@@ -22,7 +22,7 @@ const nav = [
 export function SiteHeader() {
   const { theme, systemTheme } = useTheme();
 
-  const currentTheme = theme === "dark" ? "dark" : "light";
+  const currentTheme = systemTheme === "dark" ? "dark" : "light";
   
   return (
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
