@@ -10,6 +10,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { ProgressBar } from "@/components/progress-bar"
 import { Poppins } from "next/font/google"
 import { Toaster } from "sonner"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -43,6 +44,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
         <Toaster position="bottom-right" style={{
           fontSize: '14px',
           padding: '12px 20px',
