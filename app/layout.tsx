@@ -9,6 +9,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { ProgressBar } from "@/components/progress-bar"
 import { Poppins } from "next/font/google"
+import { Toaster } from "sonner"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <Analytics />
+        <Toaster position="top-center" />
       </body>
     </html>
   )
