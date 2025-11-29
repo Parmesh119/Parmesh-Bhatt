@@ -9,7 +9,7 @@ import { Download } from "lucide-react"
 export default function ResumePage() {
   const handleDownload = () => {
     // Replace with your actual resume PDF URL
-    const resumeUrl = "/resume.pdf"
+    const resumeUrl = "/Parmesh Bhatt.pdf"
     const link = document.createElement("a")
     link.href = resumeUrl
     link.download = "Parmesh-Bhatt-Resume.pdf"
