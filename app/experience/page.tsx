@@ -9,7 +9,7 @@ const experiences = [
   {
     title: "Web Developer (Internship)",
     company: "Wappzo Infotech Private Limited",
-    period: "August 2025 - Present",
+    period: "August 2025 - November 2025",
     description: "Strengthened MERN stack fundamentals by building responsive websites with HTML, CSS, and Tailwind CSS. Enhanced front-end skills with TypeScript, React, Next.js, and React Native.",
     skills: ["React", "Next.js", "Tailwind CSS", "TypeScript", "PostgreSQL", "RESTful APIs", "React Native"],
   },
@@ -18,7 +18,7 @@ const experiences = [
     company: "Liquify Solutions",
     period: "December 2025 - May 2025",
     description:
-      "Developed enterprise-level web applications using React and Spring Boot, optimizing performance through efficient data handling and implementing best practices for scalable solutions.",
+      "Developed enterprise-level web applications using React and Spring Boot, optimising performance through efficient data handling and implementing best practices for scalable solutions.",
     skills: ["Spring Boot", "Kotlin", "Full Stack Development", "React", "Tanstack Router", "Tanstack Query", "PostgreSQL"],
   },
   {
