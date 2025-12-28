@@ -45,7 +45,7 @@ export default function ResumePage() {
           </CardHeader>
           <CardContent>
             <div className="w-full bg-muted rounded-lg overflow-hidden">
-              <iframe src="/resume.pdf" className="w-full h-screen md:h-[800px] border-0" title="Resume PDF" />
+              <iframe src="resume.pdf" className="w-full h-screen md:h-[800px] border-0" title="Resume PDF" />
             </div>
           </CardContent>
         </Card>
