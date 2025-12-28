@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const skills = {
   Languages: ["TypeScript", "JavaScript", "Kotlin", "Java"],
-  Frameworks: ["Next.js", "React", "Node.js", "Express.js", "Spring Boot", "Tanstack Router", "Tanstack Query", "Tailwind CSS", "Shadcn UI"],
+  Frameworks: ["Next.js", "React", "Node.js", "Express.js", "NestJs", "Spring Boot", "Tanstack Router", "Tanstack Query", "TypeORM", "Tailwind CSS", "Shadcn UI"],
   Tools: ["Git", "Docker", "Keycloak"],
-  Databases: ["PostgreSQL", "MongoDB"],
+  Databases: ["PostgreSQL", "MySQL", "MongoDB"],
 }
 
 const containerVariants = {
@@ -47,7 +47,7 @@ export default function SkillsPage() {
           <motion.div key={group} variants={itemVariants}>
             <Card>
               <CardHeader>
-                <CardTitle>{group}</CardTitle>
+                <CardTitle>{group === "Frameworks" ? "Frameworks / Libraries" : group}</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="flex flex-wrap gap-2">

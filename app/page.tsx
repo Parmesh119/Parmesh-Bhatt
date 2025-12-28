@@ -101,7 +101,7 @@ export default function HomePage() {
               <Linkedin size={20} className="sm:w-6 sm:h-6" />
             </Link>
             <Link
-              href="twitter.com/Parmesh_119"
+              href="https://twitter.com/Parmesh_119"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"

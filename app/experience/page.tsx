@@ -2,14 +2,24 @@
 
 import { MotionSection } from "@/components/motion-section"
 import { Card, CardContent } from "@/components/ui/card"
-import { Briefcase, Calendar } from "lucide-react"
+import { Briefcase, Calendar, MapPin } from "lucide-react"
 import { motion } from "framer-motion"
 
 const experiences = [
   {
+    title: "Web App Developer",
+    company: "Weetech Solution Private Limited",
+    period: "December 2025 - Present",
+    location: "Surat, Gujarat",
+    description:
+      "Builds scalable, production-ready backend systems using NestJS and Express, with strong expertise in relational database design and migrations using TypeORM and PostgreSQL, containerized with Docker and developed using clean TypeScript and Git-based workflows to deliver maintainable, well-tested APIs.",
+    skills: ["NestJS", "Express", "TypeORM", "PostgreSQL", "Docker", "RESTful APIs", "TypeScript", "Git", "Clean Architecture"],
+  },
+  {
     title: "Web Developer (Internship)",
     company: "Wappzo Infotech Private Limited",
     period: "August 2025 - November 2025",
+    location: "Navsari, Gujarat",
     description: "Strengthened MERN stack fundamentals by building responsive websites with HTML, CSS, and Tailwind CSS. Enhanced front-end skills with TypeScript, React, Next.js, and React Native.",
     skills: ["React", "Next.js", "Tailwind CSS", "TypeScript", "PostgreSQL", "RESTful APIs", "React Native"],
   },
@@ -17,6 +27,7 @@ const experiences = [
     title: "Software Developer (Internship)",
     company: "Liquify Solutions",
     period: "December 2025 - May 2025",
+    location: "Ahemdabad, Gujarat",
     description:
       "Developed enterprise-level web applications using React and Spring Boot, optimising performance through efficient data handling and implementing best practices for scalable solutions.",
     skills: ["Spring Boot", "Kotlin", "Full Stack Development", "React", "Tanstack Router", "Tanstack Query", "PostgreSQL"],
@@ -25,6 +36,7 @@ const experiences = [
     title: "Cloud Captain",
     company: "AWS Cloud Club Charusat",
     period: "March 2024 - March 2025",
+    location: "Charusat University, Gujarat",
     description:
       "Development of enterprise-level web applications, handling frontend components, and integrating APIs for actual data.",
     skills: ["React", "Node.js", "API Integration"],
@@ -67,16 +79,22 @@ export default function ExperiencePage() {
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <Briefcase className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                    <Briefcase className="w-6 h-6 text-primary mt-1 shrink-0" />
                     <div className="flex-1 space-y-2">
                       <h3 className="text-xl font-bold">{exp.title}</h3>
                       <p className="text-muted-foreground">{exp.company}</p>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Calendar className="w-4 h-4" />
-                    <span>{exp.period}</span>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground justify-between">
+                    <span className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>{exp.period}</span>
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <MapPin className="w-4 h-4" />
+                      <span>{exp.location}</span>
+                    </span>
                   </div>
 
                   <p className="text-muted-foreground text-justify leading-relaxed">{exp.description}</p>

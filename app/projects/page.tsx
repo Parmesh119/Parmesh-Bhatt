@@ -140,7 +140,7 @@ export default function ProjectsPage() {
             ))}
         </div>
         <Link href="https://www.linkedin.com/in/parmesh-bhatt/details/projects/" target="_blank" className="flex justify-center">
-          <Button size="lg" className="w-fit">
+          <Button size="lg" className="w-fit cursor-pointer">
             View All Projects
           </Button>
         </Link>

@@ -51,7 +51,7 @@ export default function AboutPage() {
               </p>
             </div>
             <Link href="/contact" passHref>
-              <Button size="lg" className="w-fit">
+              <Button size="lg" className="w-fit cursor-pointer">
                 Connect With Me
               </Button>
             </Link>
