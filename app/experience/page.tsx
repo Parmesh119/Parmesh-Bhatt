@@ -13,7 +13,7 @@ const experiences = [
     location: "Surat, Gujarat",
     description:
       "Builds scalable, production-ready backend systems using NestJS and Express, with strong expertise in relational database design and migrations using TypeORM and PostgreSQL, containerized with Docker and developed using clean TypeScript and Git-based workflows to deliver maintainable, well-tested APIs.",
-    skills: ["NestJS", "Express", "TypeORM", "PostgreSQL", "Docker", "RESTful APIs", "TypeScript", "Git", "Clean Architecture"],
+    skills: ["NestJS", "Express", "TypeORM", "PostgreSQL", "Docker", "RESTful APIs", "Web Socket", "TypeScript", "Git", "Clean Architecture"],
   },
   {
     title: "Web Developer (Internship)",

@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const skills = {
   Languages: ["TypeScript", "JavaScript", "Kotlin", "Java"],
-  Frameworks: ["Next.js", "React", "Node.js", "Express.js", "NestJs", "Spring Boot", "Tanstack Router", "Tanstack Query", "TypeORM", "Tailwind CSS", "Shadcn UI"],
+  Frameworks: ["Next.js", "React", "Node.js", "Express.js", "NestJs", "Spring Boot", "Tanstack Router", "Tanstack Query", "TypeORM", "Redis", "BullMQ", "Tailwind CSS", "Shadcn UI"],
   Tools: ["Git", "Docker", "Keycloak"],
   Databases: ["PostgreSQL", "MySQL", "MongoDB"],
 }
