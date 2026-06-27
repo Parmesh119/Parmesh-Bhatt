@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from "lucide-react"
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, Loader2 } from "lucide-react"
 import Link from "next/link"
 import { useForm } from "react-hook-form"
 import { sendMail } from "@/lib/send-mail"
@@ -36,7 +36,13 @@ export default function ContactPage() {
       text: mailText,
     })
     if (response?.messageId) {
-      toast.success('Form Submitted Successfully.');
+      toast.success('Form Submitted Successfully.', {
+        style: {
+          backgroundColor: "green",
+          color: 'white',
+          letterSpacing: '1px'
+        }
+      });
     } else {
       toast.error('Failed To send form.');
     }
@@ -70,7 +76,7 @@ export default function ContactPage() {
                   <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-muted-foreground">parmeshb90@gmail.com</p>
+                    <p className="text-muted-foreground">parmeshbhatt.dev@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>
@@ -232,7 +238,7 @@ export default function ContactPage() {
                 </div>
 
                 <Button disabled={isSubmitting} type="submit" size="lg" className={`w-full ${isSubmitting ? 'cursor-not-allowed' : 'cursor-pointer bg-primary text-primary-foreground'}`}>
-                  <Send className="w-4 h-4 mr-2" />
+                  {isSubmitting ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
                   {isSubmitting ? 'Submitting...' : 'Send Message'}
                 </Button>
               </form>
