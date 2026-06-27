@@ -14,7 +14,7 @@ const projects = [
     description:
       "RitualPlanner is a powerful web-based tool designed for priests to efficiently manage their daily religious tasks. From scheduling rituals and tracking clients to handling payments and reminders, it brings complete organization to every aspect of religious service management.",
     image: "/images/projects/rp.webp",
-    skills: ["React", "Tanstack Router", "Tanstack Query", "Tailwind CSS", "TypeScript", "RESTful APIs", "Kotlin", "Spring boot", "PostgreSQL"],
+    skills: ["React", "Tanstack Router", "Tanstack Query", "Tailwind CSS", "TypeScript", "RESTful APIs", "NestJs", "TypeOrm", "PostgreSQL", "Redis", "BullMQ", "Nodemailer", "FCM", "JWT", "Passport.js"],
     featured: true,
     links: { demo: "https://ritual-planner-v1.vercel.app/", source: "https://github.com/Parmesh119/RitualPlanner-V1" },
   },
